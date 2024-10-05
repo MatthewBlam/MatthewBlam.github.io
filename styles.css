@@ -431,6 +431,34 @@ main {
     width: 100%;
 }
 
+.portfolio-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio-page-title {
+    font-size: 60px;
+    font-family: "Poppins";
+    margin-bottom: 10px;
+}
+
+.github {
+    color: var(--text);
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.github a {
+    color: var(--blue);
+}
+
+.github a:hover {
+    color: var(--text-muted);
+}
+
 .learn-more {
     text-decoration: none;
     background-color: var(--blue);
@@ -453,7 +481,7 @@ main {
 
 .projects-img {
     object-fit: contain;
-    max-width: 700px;
+    max-width: 600px;
     height: auto;
     border-radius: 10px;
 }
