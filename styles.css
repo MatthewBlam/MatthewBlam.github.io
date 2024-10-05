@@ -1,0 +1,320 @@
+:root {
+    /* variables */
+    --blue: #265ecf;
+    --dark-blue: #33374c;
+    --bg: #e8e9ec;
+    --text: black;
+    --text-muted: #adb1c4;
+    --title: "Poppins";
+}
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: 0.2s;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    user-select: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+* {
+    font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    /* border: solid red; */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: var(--bg);
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    user-select: none;
+    color: var(--text);
+    padding: 30px 36px;
+}
+
+.logo {
+    font-family: "Poppins";
+    font-weight: 1000;
+    font-size: xx-large;
+}
+
+.logo:hover {
+    transform: scale(110%);
+}
+
+@media (max-width: 550px) {
+    .logo {
+        display: none;
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 30px;
+}
+
+.navbar li:hover {
+    transform: scale(105%);
+}
+
+.navbar a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar a.active-page {
+    color: var(--text-muted);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1.75px;
+}
+
+.navbar a:hover {
+    color: var(--text-muted);
+}
+
+.navbar a:active {
+    color: var(--text-muted);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+    color: var(--text);
+    padding: 10% 10%;
+}
+
+@media (max-width: 800px) {
+    .about-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+        flex-direction: column-reverse;
+        padding: 4% 10%;
+        margin-bottom: 10%;
+    }
+}
+
+.page-title {
+    margin-top: 5%;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: "Poppins";
+}
+
+.about-text {
+    font-size: x-large;
+}
+
+.about-img {
+    max-width: 320px;
+    max-height: 320px;
+    border-radius: 100%;
+    min-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.about-img:hover {
+    transform: scale(110%);
+}
+
+.footer {
+    margin-top: auto;
+    padding: 20px 30px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    color: var(--text-muted);
+}
+
+.footer p {
+    cursor: default;
+    user-select: none;
+}
+
+.footer p:hover {
+    color: var(--dark-blue);
+}
+
+main {
+    -webkit-animation: fadein 0.8s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.8s; /* Firefox < 16 */
+    -ms-animation: fadein 0.8s; /* Internet Explorer */
+    -o-animation: fadein 0.8s; /* Opera < 12.1 */
+    animation: fadein 0.8s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
