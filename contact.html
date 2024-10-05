@@ -28,35 +28,43 @@
                     </li>
                 </ul>
             </nav>
-            <main>
-                <h1 class="page-title">Contact</h1>
-                <form id="contact-form">
-                    <label for="name">Name</label>
-                    <input
-                        id="name"
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        required />
-                    <label for="email">Email</label>
-                    <input
-                        id="email"
-                        type="email"
-                        name="name"
-                        placeholder="Email"
-                        required />
-                    <label for="message">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Message"
-                        required></textarea>
-                    <input type="submit" value="Submit" />
-                </form>
+            <main class="contact-main">
+                <div class="contact-container">
+                    <h1 class="page-title">Contact</h1>
+                    <form id="contact-form">
+                        <div class="form-section">
+                            <label for="name">Name</label>
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                placeholder="Name"
+                                required />
+                        </div>
+                        <div class="form-section">
+                            <label for="email">Email</label>
+                            <input
+                                id="email"
+                                type="email"
+                                name="name"
+                                placeholder="Email"
+                                required />
+                        </div>
+                        <div class="form-section">
+                            <label for="message">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Message"
+                                required></textarea>
+                        </div>
+                        <input class="submit" type="submit" value="Submit" />
+                    </form>
+                </div>
             </main>
             <footer class="footer">
                 <p>© 2024 Matthew Blam</p>
-                <p>Made with&ensp;♥</p>
+                <p>Made with <3</p>
             </footer>
         </div>
     </body>
